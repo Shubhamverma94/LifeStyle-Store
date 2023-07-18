@@ -12,15 +12,7 @@
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
-
-Cypress.Commands.add("selectProduct", (productName) => {
-   
-    cy.get('a[href*="product/category&path="]').contains(productName).click();
-    cy.get(".prdocutname:visible").each(($el, index, $list) => {
-      //how many products are there and print there name
-      cy.log("index is -->" + index + " " + "Element Names-->" + $el.text());
-    });
-})
+import 'cypress-file-upload';
 
 //
 // -- This is a child command --
