@@ -13,9 +13,11 @@ describe("File Uploader", () => {
     const filePath = "H2S.jpg";
 
     fileUploadPage.uploadFile(filePath);
+    cy.screenshot("FileUpload");
 
     fileUploadPage.submitFile();
 
     fileUploadPage.getSuccessMessage();
+    cy.screenshot("SuccessMessage");
   });
 });
